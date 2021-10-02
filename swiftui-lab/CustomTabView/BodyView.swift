@@ -1,10 +1,3 @@
-//
-//  CustomBodyView.swift
-//  swiftui-lab
-//
-//  Created by devhaute on 2021/10/01.
-//
-
 import SwiftUI
 
 struct BodyView: View {
