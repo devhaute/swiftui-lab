@@ -11,7 +11,8 @@ import SwiftUI
 struct swiftui_labApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CustomTabView()
         }
     }
 }
+
