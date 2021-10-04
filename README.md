@@ -12,6 +12,10 @@
   - `#스위프트UI` `#VStack` `#ButtonStyle` `#haptic` `#scaleEffect` `#rotationEffect`
   - [Commit](https://github.com/devhaute/swiftui-lab/commit/2b3dd1a7166ebe35fe89c0ceebe9968a8e5e29cf)
 ####
-- [ ] **텍스트 입력 다루기** *(2021.10.3)*
+- [X] **텍스트 입력 다루기** *(2021.10.4)*
   - `#스위프트UI` `#VStack` `#HStack` `#TextField` `#SecureField`
+  - [Commit](https://github.com/devhaute/swiftui-lab/commit/a7072f25db2901ff44097f612ea9439cad331b95)
+####
+- [ ] **토스트, 팝업 다루기** *(2021.10.5)*
+  - `#스위프트UI` `#VStack` `#HStack` `#Toast message` `#popup`
   - Commit
