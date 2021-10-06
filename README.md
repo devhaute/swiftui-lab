@@ -16,6 +16,10 @@
   - `#스위프트UI` `#VStack` `#HStack` `#TextField` `#SecureField`
   - [Commit](https://github.com/devhaute/swiftui-lab/commit/a7072f25db2901ff44097f612ea9439cad331b95)
 ####
-- [ ] **토스트, 팝업 다루기** *(2021.10.5)*
+- [X] **토스트, 팝업 다루기** *(2021.10.6)*
   - `#스위프트UI` `#VStack` `#HStack` `#Toast message` `#popup`
+  - [Commit](https://github.com/devhaute/swiftui-lab/commit/5a7a25dbb71efd88cf6814bd4420c299e84762ff)
+####
+- [ ] **피커뷰 다루기** *(2021.10.6)*
+  - `#스위프트UI` `#VStack` `#HStack` `#LIST` `#State` `#ForEach` `#Enum`
   - Commit
