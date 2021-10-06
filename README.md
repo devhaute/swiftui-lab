@@ -20,6 +20,6 @@
   - `#스위프트UI` `#VStack` `#HStack` `#Toast message` `#popup`
   - [Commit](https://github.com/devhaute/swiftui-lab/commit/5a7a25dbb71efd88cf6814bd4420c299e84762ff)
 ####
-- [ ] **피커뷰 다루기** *(2021.10.6)*
-  - `#스위프트UI` `#VStack` `#HStack` `#LIST` `#State` `#ForEach` `#Enum`
+- [ ] **딥링크 다루기** *(2021.10.6)*
+  - `#스위프트UI` `#VStack` `#HStack` `#Tabview` `#NavigationView` `#List` `#Enum` `#deeplink`
   - Commit
