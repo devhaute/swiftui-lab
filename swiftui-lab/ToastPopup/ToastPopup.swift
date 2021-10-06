@@ -6,8 +6,9 @@ struct ToastPopupView: View {
     @State var shouldShowBottomToastMessage = false
     @State var shouldShowTopSolidMessage = false
     @State var shouldShowTopToastMessage = false
+    @State var shouldShowPopup = false
     
-    private let considerSafeArea: Bool = UIApplication.shared.windows.first?.safeAreaInsets.top != 0
+    private let considerSafeArea: Bool = UIApplication.shared.windows.first?.safeAreaInsets.bottom != 0
     
     func createBottomSolidMessage() -> some View {
         HStack(spacing: 10) {
@@ -15,7 +16,7 @@ struct ToastPopupView: View {
                 .font(.system(size: 40))
                 .foregroundColor(.white)
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 0) {
                 Text("안내 메세지")
                     .fontWeight(.black)
                     .foregroundColor(.white)
@@ -27,11 +28,9 @@ struct ToastPopupView: View {
                 Divider().opacity(0)
             }
         }
-        .padding(.vertical, 5)
-        .padding(.horizontal, 10)
-        .frame(width: UIScreen.main.bounds.width)
+        .padding(15)
         .padding(.bottom, self.considerSafeArea ? 15 : 0)
-        .background(Color.purple)
+        .background(Color.blue)
     }
     
     func createBottomToastMessage() -> some View {
@@ -92,7 +91,7 @@ struct ToastPopupView: View {
                 .font(.system(size: 25))
                 .foregroundColor(.white)
                 .padding(.horizontal, 5)
-
+            
             VStack(alignment: .leading, spacing: 5) {
                 Text("이오뜨님의 메세지")
                     .fontWeight(.black)
@@ -108,6 +107,44 @@ struct ToastPopupView: View {
         .background(Color.orange)
         .cornerRadius(25)
         .padding(.top, self.considerSafeArea ? 35 : 0)
+    }
+    
+    func createPopup() -> some View {
+        VStack {
+            Image("haute")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+            
+            Text("개발하는 이찬호")
+                .foregroundColor(.white)
+                .fontWeight(.bold)
+            
+            Text("한국에서 ios 개발자로 살아남기! 원래 프론트엔드 개발자였다가 ios 개발자로 전직 준비")
+                .font(.system(size: 12))
+                .foregroundColor(Color(red: 0.9, green: 0.9, blue: 0.9))
+                .multilineTextAlignment(.center)
+            
+            Spacer().frame(height: 10)
+            
+            Button {
+                self.shouldShowPopup = false
+            } label: {
+                Text("닫기")
+                    .font(.system(size: 14))
+                    .foregroundColor(.black)
+                    .fontWeight(.bold)
+            }
+            .frame(width: 100, height: 40)
+            .background(Color.white)
+            .cornerRadius(20.0)
+        }
+        .padding(.horizontal, 10)
+        .frame(width: 300, height: 400)
+        .background(Color(hexCode: "B381EB"))
+        .cornerRadius(10)
+        .shadow(radius: 10)
+        .zIndex(2)
     }
     
     var body: some View {
@@ -164,10 +201,23 @@ struct ToastPopupView: View {
                         .background(Color.orange)
                         .cornerRadius(10)
                 }
+                
+                Button {
+                    self.shouldShowPopup = true
+                } label: {
+                    Text("팝업")
+                        .font(.system(size: 25))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .frame(width: 200)
+                        .padding()
+                        .background(Color(hexCode: "34691F"))
+                        .cornerRadius(10)
+                }
             }
         }
         .edgesIgnoringSafeArea(.all)
-        .popup(isPresented: $shouldShowBottomSolidMessage, type: .floater(verticalPadding: 20), position: .bottom, animation: .easeInOut, autohideIn: 2, closeOnTap: true, closeOnTapOutside: true) {
+        .popup(isPresented: $shouldShowBottomSolidMessage, type: .toast, position: .bottom, animation: .easeInOut, autohideIn: 2, closeOnTap: true, closeOnTapOutside: true) {
             self.createBottomSolidMessage()
         }
         .popup(isPresented: $shouldShowBottomToastMessage, type: .toast, position: .bottom, animation: .spring(), autohideIn: 2, closeOnTap: true, closeOnTapOutside: true) {
@@ -179,6 +229,9 @@ struct ToastPopupView: View {
         
         .popup(isPresented: $shouldShowTopToastMessage, type: .floater(verticalPadding: 20), position: .top, animation: .spring(), autohideIn: 2, closeOnTap: true, closeOnTapOutside: true) {
             self.createTopToastMessage()
+        }
+        .popup(isPresented: $shouldShowPopup, type: .default, position: .bottom, animation: .spring(), autohideIn: .infinity, closeOnTap: false, closeOnTapOutside: true) {
+            self.createPopup()
         }
     }
 }
