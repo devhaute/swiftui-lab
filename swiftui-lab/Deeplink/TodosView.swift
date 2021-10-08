@@ -12,6 +12,7 @@ func prepareDate() -> [TodoItem] {
 
 struct TodosView: View {
     @State var todoItems: [TodoItem] = []
+    @State var activeUUID: UUID?
     
     init() {
         _todoItems = State(initialValue: prepareDate())
