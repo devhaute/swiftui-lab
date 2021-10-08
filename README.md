@@ -24,6 +24,6 @@
   - `#스위프트UI` `#VStack` `#HStack` `#Tabview` `#NavigationView` `#List` `#Enum` `#deeplink`
   - [Commit](https://github.com/devhaute/swiftui-lab/commit/02c6a5d8ee61e3e0d9c88033c3e2a86f594b649c)
 ####
-- [ ] **딥링크 다루기** *(2021.10.8)*
+- [ ] *메뉴 만들기** *(2021.10.8)*
   - `#스위프트UI` `#VStack` `#Toolbar` `#NavigationView` `#menu` `#picker`
   - Commit
