@@ -27,3 +27,8 @@
 - [X] **메뉴 만들기** *(2021.10.8)*
   - `#스위프트UI` `#VStack` `#Toolbar` `#NavigationView` `#menu` `#picker`
   - [Commit](https://github.com/devhaute/swiftui-lab/commit/1603d1d48b29b126f35c2be1459dbd9704b93d32)
+####
+- [X] **LazyVGrid 활용** *(2021.10.9)*
+  - `#스위프트UI` `#VStack` `#pickerView` `#LazyVGrid` `#extension`
+  - [Commit](https://github.com/devhaute/swiftui-lab/commit/ad47db8edd0890faa1bd9aacef139f1470ebd491)
+  - [Commit](https://github.com/devhaute/swiftui-lab/commit/d04838b77340c075869bd6c27a72257b495e81a6)
