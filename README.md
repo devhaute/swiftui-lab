@@ -1,4 +1,7 @@
 # 📚 SwiftUI 학습 결과물 저장소
+프로젝트 실행 이슈
+- [Issue](https://github.com/devhaute/swiftui-lab/issues/1)
+####
 ## 스위프트UI 앱 만들기 연습
 - [X] **커스텀 탭뷰 구현** *(2021.10.2)*
   - `#스위프트UI` `#커스텀탭뷰` `#TabView` `#ZStack` `#VStack` `#Enum` `#scaleEffect` `#animation`
